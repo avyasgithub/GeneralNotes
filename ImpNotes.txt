@@ -1,0 +1,11 @@
+TO convert xml received from file system to json use below
+json(xml(body('Get_file_content')))
+
+To get the xml node value using xpath use below
+xpath(xml(body('Get_file_content')),'string(/*[local-name()="Student"]/*[local-name()="Fname"])')
+
+Sample xml used for this is
+
+<Student>
+<Fname>xyz</Fname>
+</Student>
