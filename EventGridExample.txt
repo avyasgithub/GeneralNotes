@@ -1,0 +1,36 @@
+EventGird  Example
+
+First create Event Grid Topic from portal
+
+follow below post
+https://www.codeproject.com/Articles/1220389/Azure-EventGrid-Azure-Function-demo
+
+Event grid schema contains following.
+
+topic string
+subject string
+eventType  string
+eventTime string
+id string
+data object
+
+Events are sent to Azure Event Grid in an array, which can contain multiple event objects. 
+If there is only a single event, the array has a length of 1.
+ The array can have a total size of up to 1 MB.
+ Each event in the array is limited to 64 KB.
+
+create console app it will publish the event to event grid
+add newton soft.json
+
+create function...it will be subscriber for the events
+go to add new project--> cloud and select azure function app
+Azure Functions Tools is included in the Azure development workload of Visual Studio 2017 version 15.4, or a later version
+ Make sure you include the Azure development workload in your Visual Studio 2017 installation:
+
+to debug the fun localy download the ngrok and run the cammand
+ngrok http -host-header=localhost 7071
+this will give http url which can be used in event grid subscription so that it will redirect to local host
+while creating subscription make sure fun is running otherwise subscription will faile to create
+
+
+azure fun required a storage account.
