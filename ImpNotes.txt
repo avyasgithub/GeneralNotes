@@ -9,3 +9,15 @@ Sample xml used for this is
 <Student>
 <Fname>xyz</Fname>
 </Student>
+
+*********************88
+
+To Receive xml in logic app
+
+just post the xml content and set content type as application\xml
+
+retrieve the xml using triggerbody() or body() function. 
+
+for schema in integration the messagetype should be unique. namespace#root. 
+
+if it is same it will give error. 
